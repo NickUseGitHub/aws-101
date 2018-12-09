@@ -6,7 +6,7 @@ export default function TaskList(props) {
   return (
     <ul>
       {tasks.map(function eachTask(task) {
-        return <li key={task.id}>{task.task}</li>;
+        return <li key={task.id}>{task.name}</li>;
       })}
     </ul>
   );
