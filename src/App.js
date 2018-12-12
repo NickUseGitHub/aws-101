@@ -28,9 +28,14 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { inputTask, tasks } = this.state
+    if (!inputTask) {
+      alert('please fill task input')
+      return
+    }
+
     const newTask = {
       id: uuidv4(),
-      task: inputTask
+      name: inputTask
     };
 
     this.setState({
